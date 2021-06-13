@@ -7,9 +7,11 @@ The project is managed by maven, the solution is written in both scala and Java 
 
 In this project, I use scala 2.12.10 and Spark 3.0.8 with JRE 1.8. If you want to run it, please refer to these information. 
 
+
 ==============================
-Process:
+Process
 ==============================
+
 1. initiate sparksession, define the schema of three dataset and then read the data into spark;
 
 2. clean the data, convert the data into the format required in the next step;
