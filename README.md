@@ -1,16 +1,15 @@
 # MovieRatingSpark
 
-================================
-Introduction
-================================
+
+## Introduction
+
 The project is managed by maven, the solution is written in both scala and Java with spark framework, ref: src/main/java/JavaSolutionEntry and src/main/scala/ScalaSolutionEntry. (The solutions are same, just used two kinds of language.)
 
 In this project, I use scala 2.12.10 and Spark 3.0.8 with JRE 1.8. If you want to run it, please refer to these information. 
 
 
-==============================
-Process
-==============================
+
+## Process
 
 1. initiate sparksession, define the schema of three dataset and then read the data into spark;
 
