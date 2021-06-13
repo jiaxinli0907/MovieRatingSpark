@@ -1,0 +1,18 @@
+//schema
+val movieSchema = StructType(Array(
+  StructField("movieId", IntegerType, true),
+  StructField("name", StringType, true),
+  StructField("genre", IntegerType, true)))
+
+val ratingSchema = StructType(Array(
+  StructField("userId", IntegerType, true),
+  StructField("movieId, IntegerType, true),
+  StructField("rating", IntegerType, true),
+  StructField("date", TimestampType, true)))
+
+// read the file
+val movie= sc.textFile("D:\\myProject\\MovieRating\\data\\movies.dat").option("delimiter", "::").schema(movieSchema)
+val rating= sc.textFile("D:\\myProject\\MovieRating\\data\\ratings.dat").option("delimiter", "::").option("schema",  "userID:int :movieId: int,rating:int, date:timestamp")
+// print the file
+movie.take(10).foreach(println)
+rating.take(10).foreach(println)
